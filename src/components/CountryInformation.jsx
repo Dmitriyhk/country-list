@@ -69,11 +69,11 @@ const CountryInformation = ({ error }) => {
             <div className="countryInformation-languages">
               <span>Languages: </span>
               {Object.values(countryData?.languages).map((lang, index) => (
-                <>
+                <div key={index}>
                   <span>{lang}</span>
                   {Object.values(countryData?.languages).length !==
                     index + 1 && <span>, </span>}
-                </>
+                </div>
               ))}
             </div>
             {countryData?.borders?.length > 0 && (
@@ -81,7 +81,7 @@ const CountryInformation = ({ error }) => {
                 <span>Borders: </span>
                 {countryData?.borders &&
                   countryData.borders.map((country, index) => (
-                    <>
+                    <div key={index}>
                       <span
                         className="countryInformation-borders__country"
                         onClick={() => getCountry(country)}
@@ -91,7 +91,7 @@ const CountryInformation = ({ error }) => {
                       {countryData.borders.length !== index + 1 && (
                         <span>, </span>
                       )}
-                    </>
+                    </div>
                   ))}
               </div>
             )}

@@ -22,7 +22,7 @@ const MyFavorites = () => {
     <div className="myFavorites">
       <h4>My Favorites:</h4>
       {favorites.map((el, index) => (
-        <div className="myFavorites-country">
+        <div key={index} className="myFavorites-country">
           <span className="myFavorites-country__text">
             {index + 1}. {el}
           </span>
