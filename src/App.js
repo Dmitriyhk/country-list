@@ -1,8 +1,12 @@
-import React from "react";
+import Country from "./pages/Country";
+import "./App.scss";
 
 const App = () => {
-  console.log("dsaasas");
-  return <div>App</div>;
+  return (
+    <div className="app">
+      <Country />
+    </div>
+  );
 };
 
 export default App;
