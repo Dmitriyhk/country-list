@@ -11,8 +11,8 @@ const SearchResults = ({ data, error, isLoading }) => {
           <span>No data</span>
         ) : (
           <div>
-            {data.map((country) => (
-              <div className="searchResults-name">
+            {data.map((country, index) => (
+              <div key={index} className="searchResults-name">
                 <span className="searchResults-name__text">
                   {country?.name?.official}
                 </span>

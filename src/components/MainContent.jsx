@@ -17,7 +17,6 @@ const MainContent = ({ countryName }) => {
       dispatch(removeCountry());
     }
   }, [data]);
-  console.log("is", isLoading);
   return isLoading ? (
     <h2>Loading...</h2>
   ) : (
