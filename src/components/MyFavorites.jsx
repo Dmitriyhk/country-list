@@ -8,7 +8,7 @@ const MyFavorites = () => {
 
   useEffect(() => {
     const arr = JSON.parse(localStorage.getItem("fav"));
-    dispatch(addArrCountries({ arr }));
+    arr && dispatch(addArrCountries({ arr }));
   }, []);
 
   useEffect(() => {
